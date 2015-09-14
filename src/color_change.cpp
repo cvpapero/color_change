@@ -33,9 +33,9 @@ public:
   {
     double c = msg->data*255/50;
     cout << "msg: "<<msg->data << ", color: "<<c <<endl;
-    cv::Mat img = cv::Mat::zeros(500, 500, CV_8UC3);
+    cv::Mat img = cv::Mat::zeros(1000, 2000, CV_8UC3);
     // Blue，塗りつぶし，アンチエイリアス
-    cv::rectangle(img, cv::Point(0,0), cv::Point(500, 500), cv::Scalar(c,c,c), -1, CV_AA);
+    cv::rectangle(img, cv::Point(0,0), cv::Point(2000, 1000), cv::Scalar(c,c,c), -1, CV_AA);
 
     // Update GUI Window
     cv::imshow(OPENCV_WINDOW, img);
